@@ -18,11 +18,11 @@ app=FastAPI(
 
 )
 
-add_routes(
-    app,
-    ChatOpenAI(),
-    path="/openai"
-)
+#add_routes(
+#    app,
+#    ChatOpenAI(),
+#    path="/openai"
+#)  this an example 
 model=ChatOpenAI()
 ##ollama llama2
 llm=Ollama(model="llama2")
