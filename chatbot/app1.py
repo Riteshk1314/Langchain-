@@ -10,8 +10,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-os.environ["LANGCHAIN_TRACING_V2"]="true"
-os.environ["LANGCHAIN_API_KEY"]=os.getenv("ls__4bbef910784e41889d4bcf7604a10781")
+os.environ["LANGCHAIN_TRACING_V2"]="true" #for gtting tracing of our project 
+os.environ["LANGCHAIN_API_KEY"]=os.getenv("ls__4bbef910784e41889d4bcf7604a10781") #for getting it on our own dashboard 
 
 #prompt template 
 prompt=ChatPromptTemplate.from_messages(
