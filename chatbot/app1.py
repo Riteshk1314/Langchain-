@@ -17,14 +17,14 @@ os.environ["LANGCHAIN_API_KEY"]=os.getenv("ls__4bbef910784e41889d4bcf7604a10781"
 prompt=ChatPromptTemplate.from_messages(
     [
         ("system","you are  helpful emotionally intelligent assistant please answer the user queries")
-        ("the following are the {emotion} and this is the questions:{question}")
+        ("the following is the {question}")
     ]
 )
 
 
 # ollama LLAma2 LLm 
 llm=Ollama(model="llama2")
-output_parser=StrOutputParser()
-chain=prompt|llm|output_parser
+output_parser=StrOutputParser() #for gtetting the output
+chain=prompt|llm|output_parser #combining 
 if input_text:
-    st.write(chain.invoke({"question":input_text}))
+    st.write(chain.invoke({"question":input_text})) #invoking the chain
