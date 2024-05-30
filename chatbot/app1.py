@@ -1,9 +1,9 @@
 
 
-from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.output_parsers import StrOutputParser
-from langchain_community.llms import Ollama
-import streamlit as st
+from langchain_core.prompts import ChatPromptTemplate #for giving initial prompt template
+from langchain_core.output_parsers import StrOutputParser # by default str parser
+from langchain_community.llms import Ollama #using an open source model 
+import streamlit as st # for easy frontend 
 import os
 from dotenv import load_dotenv
 
