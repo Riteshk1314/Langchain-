@@ -1,5 +1,7 @@
-#data ingestion 
 from langchain_community.document_loaders import TextLoader
-loader=TextLoader("speech.txt")
-text=loader.load()
-text
+
+file_path = "speech.txt"
+loader = TextLoader(file_path)
+
+text_documents = loader.load()
+print(text_documents)
